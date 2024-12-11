@@ -1,0 +1,18 @@
+PROCESS OF GEOMETRY BUILDING
+
+1. Create geometry in python script
+2. call condi, diverging, cylindrical or conical to generate boundary coordinate text files
+3. run the c++ mesh generation computed
+4. call meshplot from geometry folder
+
+OVERVIEW OF SOLVING
+
+1. Build gometry in geometry folder using python script - (need to make sure that jmax/imax < spacing in python file)
+2. Initial Grid is computed using a transinite grid and then using poissons equation
+3. Cell vertices and centres are stored in cartesian coordinates
+4. Exisiting solver by sankaran is modified to calculate fluxes, sources and advection/diffusion in a non-orthogonal grid
+
+
+
+COMPILATION
+g++ -o program main.cpp memory.cpp io.cpp domain.cpp grideval.cpp initialcon.cpp boundarycon.cpp recalc.cpp solver.cpp timestep.cpp calcconv.cpp timemarch.cpp calcdiss.cpp calcenergy.cpp mlinearalgebra.cpp mjacobian.cpp eigensys.cpp

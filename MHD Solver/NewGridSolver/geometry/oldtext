@@ -1,0 +1,16 @@
+with open('topbound.txt', 'w') as f:
+    # Write data rows
+    for i in range(len(xtop)):
+        f.write('{}\t{}\t{}\n'.format(xtop[i], ytop[i]))
+with open('leftbound.txt', 'w') as f:
+    # Write data rows
+    for i in range(len(xtop)):
+        f.write('{}\t{}\t{}\n'.format(xleft[i], yleft[i]))
+with open('topbound.txt', 'w') as f:
+    # Write data rows
+    for i in range(len(xbot)):
+        f.write('{}\t{}\t{}\n'.format(xbot[i], ybot[i]))
+with open('topbound.txt', 'w') as f:
+    # Write data rows
+    for i in range(len(xright)):
+        f.write('{}\t{}\t{}\n'.format(xright[i], yright[i]))

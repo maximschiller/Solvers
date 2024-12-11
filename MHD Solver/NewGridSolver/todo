@@ -1,0 +1,54 @@
+TESTING
++ test four geometries - (straight channel, wedged thruster [exit angle with no curvature], diverging thruster with curvature, con-di thruster with curvature)
+
+TO UPDATE
++ input geometry
++ meshing quality
++ cathode positioning limit determination
++ update Rc and Ra grid position if geometry changes
++ need to update the RAD and Z based on the domain size
+
+
+TODAY
++ modify sankaran solver
++ finish laplace grid generation - improve grid quality by using spacing - check what the values in the laplace calculation are
++ finish grideval script
++ fix up declarations in variables.h
++ fix up how domain geometry building is going to be done - use gmsh files
++ plot cellGeom function parameters to make sure all vectors are correct - need to check direction of vectors
++ check if dimensions of matrices are correct, i.e. x,y,xc,yc using xmax and ymax - maybe just make them equal to imax and jmax
++ compute dimensions of thruster using grid geometry
++ check the values of numR and numZ
++ update all arrays in grid generation to use dynamic memory
++ in initialcon.cpp need to check that the inlet values can be set by using an integer
++ need to change the if statement check for the calculation of Ra - need to update array bounds which calculate Ra and Rc
++ initalcon.cpp - print convergence data - check inlet property positions
++ need to set the fact that Ra/Rc are the number of cells and Ranode/Rcathode are the actual sizes
++ need to go through and make sure all variables are correct
++ need to check the bounds of cell centre counters
++ need to fix the storing of domain and mesh generation - currently have temporarily fixed by using transpose but means imax and jmax have to be the same due to memory allocation
++ check if need to fix boundary conditions at cell edge centres
++ create code which can make importing initial domain geometry easier
+    - potentially use software and code to discretise curves
+    - make functions for each curve wanting to be used
++ fix tecplotting code to view grid generation
++ streamline the code better
++ check for // ?? in code
++ at the moment do it by zone just so its easier to integrate into sankarans solver but will need to update later
++ generate coordinates in python for all geometries
++ need to update the cathode geometry boundary - need to output boundary points in a way which can be read in by solver
++ potentially create a seperate script for outputting results so as not to mess up declaration order
++ need to update mesh generation so that it works with full scale domains
++ currently have imax and jmax independent of spacing which is alright since i get furhter control over domain and also since each boundary has a different number of coordinates from text file which means i can better control spacing - may potentially update in future but not necessary
++ make the ends of the mesh a bit more structured
+
+NOTES
+- add variables to variable.h and matrices to memory.cpp as you go to make debugging easier
+
+MOA
+- grideval - initialcon - boundarycon - calconv
+- solver - recalculate - timestep - timemarch - calcdiss - energycalc
+- memory
+
+
+

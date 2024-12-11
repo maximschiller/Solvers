@@ -1,0 +1,17 @@
+// double xc[xmax][ymax], yc[xmax][ymax]; // centroid position arrays
+// double totVol[xmax][ymax]; // Total volume of each cell
+// double fAn[xmax][ymax], fAe[xmax][ymax], fAs[xmax][ymax], fAw[xmax][ymax]; // face areas
+// double nvni[xmax][ymax], nvnj[xmax][ymax], nvei[xmax][ymax], nvej[xmax][ymax],
+//         nvsi[xmax][ymax], nvsj[xmax][ymax], nvwi[xmax][ymax], nvwj[xmax][ymax]; // normal vectors
+// double dzeta, deta; // cell centre to cell centre length and face area length
+// double ezetani[xmax][ymax], ezetanj[xmax][ymax], ezetaei[xmax][ymax], ezetaej[xmax][ymax],
+//         ezetasi[xmax][ymax], ezetasj[xmax][ymax], ezetawi[xmax][ymax], ezetawj[xmax][ymax]; // cell centre to cell centre vector
+// double eetani[xmax][ymax], eetanj[xmax][ymax], eetaei[xmax][ymax], eetaej[xmax][ymax], 
+//         eetasi[xmax][ymax], eetasj[xmax][ymax], eetawi[xmax][ymax], eetawj[xmax][ymax]; // face area vector
+// double thetan[xmax][ymax], thetae[xmax][ymax], thetas[xmax][ymax], thetaw[xmax][ymax];
+// double Ranode[xmax], Rcathode[xmax]; // radius of anode/cathode at different z-direction positions
+
+
+// int i, j; // computational domain variables
+// int imax=6, jmax=6;
+// double x[xmax][ymax], y[xmax][ymax], Pdom[xmax][ymax], Qdom[xmax][ymax]; // matrices
